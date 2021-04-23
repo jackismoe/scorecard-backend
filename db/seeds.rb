@@ -478,4 +478,3 @@ puts "\n\n\nSeeds created successfully."
 puts @player_count.to_s + ' player(s)'
 puts @course_count.to_s + ' course(s)'
 puts @score_count.to_s + ' score(s)'
-
