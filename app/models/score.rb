@@ -1,4 +1,4 @@
 class Score < ApplicationRecord
   belongs_to :player
-  belongs_to :score
+  belongs_to :course
 end
