@@ -26,8 +26,14 @@ ActiveRecord::Schema.define(version: 2021_04_23_004410) do
 
   create_table "scores", force: :cascade do |t|
     t.integer "score"
+    t.integer "player_id"
+    t.integer "course_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["course_id"], name: "index_scores_on_course_id"
+    t.index ["player_id"], name: "index_scores_on_player_id"
   end
 
+  add_foreign_key "scores", "courses"
+  add_foreign_key "scores", "players"
 end
